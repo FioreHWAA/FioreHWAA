@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8" />
+  <title> 무언가 생각날 때 마다 계속 수정 </title>
+</head>
+<body>
+<style>
+  body {					/* 기초 화면 세팅 */
+      display: flex;			/* 화면 요소를 플렉스 박스로 설정하여 유연한 레이아웃 제공 */
+      flex-direction: column;		/* 플렉스 아이템을 세로 방향으로 정렬 */
+      align-items: center;		/* 플렉스 아이템을 수평 중앙으로 정렬 */
+      justify-content: center;		/* 플렉스 아이템을 수직 중앙으로 정렬 */
+      margin: 0;				/* 기본 마진을 없애서 여백 제거 */
+  }
+  form {					/* 폼 요소 중앙 정렬 */
+      text-align: center;			/* 폼 내부 텍스트와 컨텐츠를 중앙 정렬 */
+  }
+  select {					/* 선택 상자 스타일 */
+      width: 700px;			/* 선택 상자의 너비를 700px로 설정 */
+      padding: 5px;			/* 선택 상자 안의 패딩을 5px로 설정 */
+      font-size: 14px;			/* 글자 크기를 14px로 설정 */
+      margin: 10px 0;			/* 선택 상자의 위아래 여백을 10px로 설정 */
+  }
+  #result, #result1 {				/* 결과 텍스트 스타일 */
+      margin-top: 20px;		/* 결과 텍스트의 상단에 20px 여백 추가 */
+      font-size: 16px;			/* 결과 텍스트의 글자 크기를 16px로 설정 */
+      font-weight: bold;		/* 결과 텍스트를 굵게 표시 */
+  }
+</style>
+<form><br><br><br><br><br>
+  무언가 생각날 때 마다 계속 수정
+  <br>
+  공식 홈페이지가 있는 경우 공홈 가격을 작성하고, 아닐 경우 따로 찾아서 기재
+  <br><br>
+</form>
+- 통신요금, 교통비, 자취 비용, 만약 차를 사게 된다면 유지보수 비용까지 고려할 것
+<br>
+- 2000만원이 모인다고 가정하고 계산 ( 실제로는 더 받는것으로 알고 있지만 여러 곳에서 나갈 돈을 생각)
+<br>
+- 애플 제품의 경우, 교육할인 또는 최저가보장 등의 요인으로 필요 금액이 조금 더 낮아질 수도 있음
+<br>
+- 그 외 잡다한 요인까지 생각해서 계산할 것
+<br><br><br>
+<ul>
+  <li> 아이폰 일반형, 아이패드/맥북 에어의 경우 60Hz 주사율만을 지원함
+  <li> 애플워치 울트라의 경우, 저기에 올려놓긴 했지만 생각 없음
+  <li> 아이패드의 경우, 용량은 충분히 생각할 것 <----- 용량 선택에 따른 급차이가 존재함 / 나머지 잡다한 것 포함이기 때문에 저거보단 가격부담이 낮음
+  <li> 아이패드의 경우, 바로 사지는 말고 생태계에 익숙해진 이후 결정할 것
+  <li> M4 Max 맥북프로의 경우 과한 오버스펙일 수 있음. 어차피 게임은 조립컴이 있고, M6 출시 시점에서 가격이 오를 것을 생각할 것
+  <li> 비전 프로는 뭔가 사고 싶기는 한데 그렇게 막 끌리지는 않음. 최종적으로 돈이 남게되면 구매할 것
+  <li> 현재 사용중인 북4프로의 경우, 크기 + 배터리 + 내부 열손상으로 인해 새로 사는쪽으로
+  <li> 갤럭시탭을 다시 사는게 맞을것으로 보임. 플러스나 울트라 중 하나로 <----- 크기, 배터리 이슈
+  <li> 갤럭시탭의 경우, 노트북에 연동해서 세컨드스크린 + 기타 잡다한 용도. 아이패드와 용도가 겹치기 때문에 높은게 필요하지 않음
+  <li> 탭S10에 대한 혹평이 많지만, 작성일 기준 일단 최신이기 때문에 일단 넣어둠. 탭S12가 잘나오길 바라는 수밖에
+  <li> S27 울트라, Z폴드 8까지 고려할 것. <----- 사는쪽으로?
+  <li> 컴퓨터 구매 후 집에서 쓰다가 자취방으로 한번 옮겨야 함. 지금도 7800X3D 공랭으로 커버 안되서 결국엔 수냉으로 가야함. 나중에 잘 생각할 것
+</ul>
+<ol>
+  <li type=l> 낫싱 폰 (2) 의 소프트웨어 지원이 2026년 종료
+  <li type=l> 아이폰은 프로 말고 프로맥스로
+  <li type=l> 아이패드를 사게 되면 프로 256GB로 가는것이 나을것 같음. 적어도 지금은
+  <li type=l> MacOS의 연동성 문제 때문에 윈도우 노트북이 필요함.
+  <li type=l> 노트북 크기에 대해선 16인치를 유지할 수 있음.
+  <li type=l> 차는 살거면 중고차로 가는게 나을듯
+  <li type=l> 조립컴퓨터는 예전부터 사고 싶었음. 때문에 구매가 기본 선택	<!-- 허수아비 컴퓨터 -->
+  <li type=l> 컴퓨터 스펙에 대해선 타협하지 않음
+  <li type=l> 에이블튼 라이브 스위트는 해당 연도의 가장 최신으로 가는 것으로 함. <----- 플러그인 이슈
+</ol>
+<ul>
+  <li> 아래 애플 제품들은 애플케어플러스 미적용 가격들
+  <li> 라이젠 9700 출시에 맞춰서 컴퓨터 정보 변경할 것
+  <li> 지금 갤럭시북4 프로 16인치 125H 모델이 보이지 않음. 나중에 수정할 것
+</ul>
+<form>
+  <br>
+  <br>
+  <br>
+  <br>
+  <select id="select1" onchange="calculateSum()">
+    <option value="0"> 선택 안함 </option>
+    <option value="250" selected> 250 || 아이폰 16 프로 맥스, 1TB </option>
+  </select>
+  <br>
+  <select id="select2" onchange="calculateSum()">
+    <option value="0"> 선택 안함 </option>
+    <option value="35.9" selected> 35.9 || 에어팟 프로 2세대 </option>
+  </select>
+  <br>
+  <select id="select3" onchange="calculateSum()">
+    <option value="0"> 선택 안함 </option>
+    <option value="59.9" selected> 59.9 || 애플워치 10세대 </option>
+    <option value="114.9"> 114.9 || 애플워치 울트라 </option>
+  </select>
+  <br>
+  <select id="select4" onchange="calculateSum()">
+    <option value="0" selected> 선택 안함 </option>
+    <option value="236.3"> 236.3 || M2 아이패드 에어, 13인치, 512GB, 애플펜슬, 매직키보드 </option>
+    <option value="214.3"> 214.3 || M4 아이패드 프로, 11인치, 256GB, 스탠다드 글래스, Wi-Fi, 애플펜슬, 매직키보드 </option>
+    <option value="271.3"> 271.3 || M4 아이패드 프로, 13인치, 256GB, 스탠다드 글래스, Wi-fi, 애플펜슬, 매직키보드 </option>
+    <option value="361.3"> 361.3 || M4 아이패드 프로, 13인치, 1TB, 스탠다드 글래스, Wi-Fi, 애플펜슬, 매직키보드 </option>
+  </select>
+  <br>
+  <select id="select5" onchange="calculateSum()">
+    <option value="0" selected> 선택 안함 </option>
+    <option value="383.3"> 383.3 || M3 맥북에어, 13인치, 24GB RAM, 2TB, 35W 듀얼, 파이널컷 + 로직 프로 </option>
+    <option value="435.2"> 435.2 || M4 맥북 프로, 14인치, 스탠다드 디스플레이, 32GB RAM, 2TB, 96W, 파이널컷 + 로직 프로 </option>
+    <option value="533.8"> 533.8 || M4 Pro 맥북 프로, 16인치, 스탠다드 디스플레이, 24GB RAM, 2TB, 파이널컷 + 로직 프로 </option>
+    <option value="1153.8"> 1153.8 || M4 Max 맥북 프로, 16인치, 스탠다드 디스플레이, 128GB RAM, 8TB, 파이널컷 + 로직 프로 </option>
+  </select>
+  <br>
+  <select id="select6" onchange="calculateSum()">
+    <option value="0" selected> 선택 안함 </option>
+    <option value="500"> 500 || 애플 비전 프로, 256GB </option>
+    <option value="600"> 600 || 애플 비전 프로, 1TB </option>
+  </select>
+  <br>
+  <select id="select7" onchange="calculateSum()">
+    <option value="0" selected> 선택 안함 </option>
+    <option value="179"> 179 || LG 그램 2024, 14인치, 코어 울트라 5 125H, 16GB RAM, 512GB </option>
+    <option value="167.2"> 167.2 || 갤럭시북 4 Pro, 14인치, 코어 울트라 5 125H, 16GB RAM, 256GB </option>
+  </select>
+  <br>
+  <select id="select8" onchange="calculateSum()">
+    <option value="0" selected> 선택 안함 </option>
+    <option value="114.1"> 114.1 || 갤럭시탭 S10+ (12.4인치), 256GB, Wi-Fi </option>
+    <option value="149.1"> 149.1 || 갤럭시탭 S10 울트라 (14.6인치), 256GB, Wi-Fi </option>
+  </select>
+  <br>
+  <select id="select12" onchange="calculateSum()">
+    <option value="0" selected> 선택 안함 </option>
+    <option value="191.9"> 191.9 || S24 울트라, 1TB </option>
+    <option value="253.1"> 253.1 || Z 폴드 6, 1TB </option>
+    <option value="278.96"> 278.96 || Z 폴드 SE, 512GB </option>
+  </select>
+  <br>
+  <select id="select9" onchange="calculateSum()">
+    <option value="0" selected> 선택 안함 </option>
+    <option value="1325"> 1325 || 모닝 트렌디, 옵션 미포함 </option>
+    <option value="1385"> 1385 || 캐스퍼 스마트, 옵션 미포함 </option>
+    <option value="1820"> 1820 || 모닝 GT-line, 옵션 미포함 </option>
+    <option value="1870"> 1870 || 캐스퍼 인스퍼레이션, 옵션 미포함 </option>
+  </select>
+  <br>
+  <select id="select10" onchange="calculateSum()">
+    <option value="0"> 선택 안함 </option>
+    <option value="305" selected> 대략 305 || 270.9 허수아비 컴퓨터 - 가격 변동성 있음, 7800X3D, 4070tiS, 32GB RAM, 512GB 기준 + 기타 다른 부품 </option>
+    <option value="320"> 대략 320 || 285.6 다나와 조립컴퓨터 - 가격 변동성 높음, 7800X3D, 4070S, 32GB RAM, 2TB + 기타 다른 부품 </option>
+  </select>
+  <br>
+  <select id="select11" onchange="calculateSum()">
+    <option value="0"> 선택 안함 </option>
+    <option value="87.9" selected> 87.9 || Ableton Live 12 Suite (Upgrade) </option>
+  </select>
+  <br>
+  <select id="select13" onchange="calculateSum()">
+    <option value="0"> 선택 안함 </option>
+    <option value="120" selected> 120 || 클럭 음식물 쓰레기 처리기 </option>
+  </select>
+  <br>
+  <select id="select14" onchange="calculateSum()">
+    <option value="0" selected> 선택 안함 </option>
+    <option value="0"> 로봇청소기 나중에 추가할 것 </option>
+  </select>
+  <br>
+  <select id="select15" onchange="calculateSum()">
+    <option value="0"> 선택 안함 </option>
+    <option value="30"> 30 || 자전거 - 네이버에 자전거라고 쳤더니 다 가격이 비싸게 나와서 일단 30으로 함 </option>
+    <option value="100"> 100 || 전동킥보드 - 일단 대충 잡은 평균값 </option>
+  </select>
+  <br>
+  <select id="select16" onchange="calculateSum()">
+    <option value="0"> 선택 안함 </option>
+    <option value="300" selected> 300 || 월세 보증금 (대략) </option>
+    <option value="2000"> 2000 || 전세 보증금 (대략) </option>
+  </select>
+  <br>
+  <div id="result"> 총합: </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+</form>
+<script>
+  function calculateSum() {
+    let sum = 0;
+
+    const selectElements = document.querySelectorAll('select[id^="select"]');
+
+    selectElements.forEach(selectElement => {
+      const value = parseFloat(selectElement.value);
+      if (!isNaN(value)) {
+        sum += value;
+      }
+    });
+
+    document.getElementById('result').innerText = '총합: ' + sum.toFixed(2); // 소숫점 두번째 자리까지만 표시하도록 설정
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    calculateSum();
+
+    const selectElements = document.querySelectorAll('select[id^="select"]');
+    selectElements.forEach(select => {
+      select.addEventListener('change', calculateSum);
+    });
+  });
+</script>
+</body>
+</html>
