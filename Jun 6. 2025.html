@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8" />
+  <title> 퀄컴 스냅드래곤 </title>
+</head>
+<style>
+  body {					/* 기초 화면 세팅 */
+      display: flex;			/* 화면 요소를 플렉스 박스로 설정하여 유연한 레이아웃 제공 */
+      flex-direction: column;		/* 플렉스 아이템을 세로 방향으로 정렬 */
+      align-items: center;		/* 플렉스 아이템을 수평 중앙으로 정렬 */
+      justify-content: center;		/* 플렉스 아이템을 수직 중앙으로 정렬 */
+      margin: 0;				/* 기본 마진을 없애서 여백 제거 */
+  }
+  form {					/* 폼 요소 중앙 정렬 */
+      text-align: center;			/* 폼 내부 텍스트와 컨텐츠를 중앙 정렬 */
+  }
+  select {					/* 선택 상자 스타일 */
+      width: 700px;			/* 선택 상자의 너비를 700px로 설정 */
+      padding: 5px;			/* 선택 상자 안의 패딩을 5px로 설정 */
+      font-size: 14px;			/* 글자 크기를 14px로 설정 */
+      margin: 10px 0;			/* 선택 상자의 위아래 여백을 10px로 설정 */
+  }
+  #result {				/* 결과 텍스트 스타일 */
+      margin-top: 20px;		/* 결과 텍스트의 상단에 20px 여백 추가 */
+      font-size: 16px;			/* 결과 텍스트의 글자 크기를 16px로 설정 */
+      font-weight: bold;		/* 결과 텍스트를 굵게 표시 */
+  }
+  // 고마워요 챗지피티!
+</style>
+<body>
+<form>
+  <br><br><br><br><br>
+  계속 리뉴얼할 것
+  <br><br>
+  2025년 6월 6일 최신화 기준
+  <br><br>
+</form>
+- 통신요금, 교통비, 자취 비용 + 기타 비용까지 고려해서 가능하면 3000 안쪽으로
+<br>
+- 애플 제품의 경우, 몇몇 요인으로 인해 필요 가격이 낮아질 수도 있지만 일단 저대로 계산
+<br>
+- 추후에 알바를 뛰면서 기타 부가적인 지출을 커버칠 수 있음
+<br><br><br>
+<ol>
+  <li> 아이폰은 큰 변수가 없으면 프로맥스 </li>
+  <li> 애플워치도 큰 변수가 없으면 기본 모델 </li>
+  <li> 에어팟 또한 큰 변수가 없으면 프로 모델 </li>
+  <li> 갤럭시북, 갤럭시탭 또한 큰 변수가 없으면 프로, 울트라 </li>
+  <li> MacOS의 연동성 이슈, 데스크탑의 이동성 이슈로 윈도우 노트북은 필요함 </li>
+  <li> S27 울트라 시기에 맞게 S24 울트라는 올갈이 </li>
+  <li> 컴퓨터 스펙에 대해선 타협하지 않음 </li>
+  <li> 에이블튼 라이브 스위트는 해당 연도의 가장 최신으로 <!-- 최신버전 업데이트가 굳이 필요하지 않음 --> </li>
+  <li> 그 외 아래 자취방 비용, 정기구독 서비스, 피부과는 현재 확정 내용 </li>
+</ol>
+<ol type="A">
+  <li> 낫싱 폰 (2) 의 소프트웨어 지원이 2026년 종료 </li>
+  <li> 아이패드의 경우, 그때 가서 생각할 것. </li>
+  <li> 비전 프로는 뭔가 끌리기는 한데 필수는 아님. 나중에 돈이 많이 남으면 그때 생각 </li>
+  <li> 컴퓨터는 사고 나서 집에서 자취방으로 갈 수도 있고, 바로 자취방으로 갈 수도 있고 <!-- 수냉이면 터질 우려가 있으니깐 --> </li>
+  <li> 차는 살거면 중고차 </li>
+</ol>
+<ul>
+  <li> 아래 애플 제품들은 애플케어플러스 미적용 가격들 </li>
+  <li> 다수의 정보 수정 필요  </li>
+-  아이패드, 맥북, 노트북, 컴퓨터 등의 몇몇 요인은 변수가 너무 심한 관계로 보류
+  <li> 추후에 이루어질 관세 등의 요인을 고려하여 계속해서 수정해 놓을 것 </li> <!-- 뭐 디자인도 조금씩 계속 바꾸면 좋고 -->
+</ul>
+<form>
+<dl>
+  <br>
+  <hr />
+  <hr />
+  <br>
+</dl>
+  <select id="select1" onchange="calculateSum()">
+    <option value="0"> 선택 안함 </option>
+    <option value="250" selected> 250 || 아이폰 16 프로 맥스, 1TB </option>
+  </select>
+  <br>
+  <select id="select2" onchange="calculateSum()">
+    <option value="0"> 선택 안함 </option>
+    <option value="34.9" selected> 34.9 || 에어팟 프로 2세대 </option>
+  </select>
+  <br>
+  <select id="select3" onchange="calculateSum()">
+    <option value="0"> 선택 안함 </option>
+    <option value="59.9" selected> 59.9 || 애플워치 10세대 (최소사양) </option>
+    <option value="114.9"> 114.9 || 애플워치 울트라 (최소사양) </option>
+  </select>
+  <br>
+  <select id="select4" onchange="calculateSum()">
+    <option value="0" selected> 선택 안함 </option>
+    <option value="236.3"> 236.3 || M2 아이패드 에어, 13인치, 512GB, 애플펜슬, 매직키보드 </option>
+    <option value="214.3"> 214.3 || M4 아이패드 프로, 11인치, 256GB, 스탠다드 글래스, Wi-Fi, 애플펜슬, 매직키보드 </option>
+    <option value="271.3"> 271.3 || M4 아이패드 프로, 13인치, 256GB, 스탠다드 글래스, Wi-fi, 애플펜슬, 매직키보드 </option>
+    <option value="361.3"> 361.3 || M4 아이패드 프로, 13인치, 1TB, 스탠다드 글래스, Wi-Fi, 애플펜슬, 매직키보드 </option>
+  </select>
+  <br>
+  <select id="select5" onchange="calculateSum()">
+    <option value="0" selected> 선택 안함 </option>
+    <option value="383.3"> 383.3 || M3 맥북에어, 13인치, 24GB RAM, 2TB, 35W 듀얼, 파이널컷 + 로직 프로 </option>
+    <option value="435.2"> 435.2 || M4 맥북 프로, 14인치, 스탠다드 디스플레이, 32GB RAM, 2TB, 96W, 파이널컷 + 로직 프로 </option>
+    <option value="533.8"> 533.8 || M4 Pro 맥북 프로, 16인치, 스탠다드 디스플레이, 24GB RAM, 2TB, 파이널컷 + 로직 프로 </option>
+    <option value="1153.8"> 1153.8 || M4 Max 맥북 프로, 16인치, 스탠다드 디스플레이, 128GB RAM, 8TB, 파이널컷 + 로직 프로 </option>
+  </select>
+  <br>
+  <select id="select6" onchange="calculateSum()">
+    <option value="0" selected> 선택 안함 </option>
+    <option value="500"> 500 || 애플 비전 프로, 256GB </option>
+    <option value="600"> 600 || 애플 비전 프로, 1TB </option>
+  </select>
+  <br>
+  <select id="select7" onchange="calculateSum()">
+    <option value="0"> 선택 안함 </option>
+    <option value="167"> 167 || LG 그램 2025, 16인치, 코어 울트라 5 225H, 16GB RAM, 512GB </option>
+    <option value="230.8" selected> 230.8 || 갤럭시북 5 Pro, 16인치, 코어 울트라 5 225H, 16GB RAM, 512GB </option>
+  </select>
+  <br>
+  <select id="select8" onchange="calculateSum()">
+    <option value="0"> 선택 안함 </option>
+    <option value="115"> 115 || 갤럭시탭 S10+ (12.4인치), 256GB, Wi-Fi </option>
+    <option value="149.1" selected> 147.5 || 갤럭시탭 S10 울트라 (14.6인치), 256GB, Wi-Fi </option>
+  </select>
+  <br>
+  <select id="select12" onchange="calculateSum()">
+    <option value="0"> 선택 안함 </option>
+    <option value="206.23" selected> 206.23 || S25 울트라, 1TB </option>
+    <option value="248.49"> 248.49 || Z 폴드 6, 1TB </option>
+    <option value="278.96"> 278.96 || Z 폴드 SE, 512GB - 현재 구매 불가 </option>
+  </select>
+  <br>
+  <select id="select9" onchange="calculateSum()">
+    <option value="0" selected> 선택 안함 </option>
+    <option value="1325"> 1325 || 모닝 트렌디, 옵션 미포함 </option>
+    <option value="1385"> 1385 || 캐스퍼 스마트, 옵션 미포함 </option>
+    <option value="1820"> 1820 || 모닝 GT-line, 옵션 미포함 </option>
+    <option value="1870"> 1870 || 캐스퍼 인스퍼레이션, 옵션 미포함 </option>
+  </select>
+  <br>
+  <select id="select10" onchange="calculateSum()">
+    <option value="0" selected> 선택 안함 </option>
+    <option value="346.2"> 346.2 || 허수아비 컴퓨터 - 9700X, 5070 TI, 64GB RAM, 2TB + 윈도우 </option>
+    <option value="371.29"> 371.29 || 다나와 조립컴퓨터 - 9800X3D, 5070, 64GB RAM, 2TB + 윈도우 </option>
+  </select>
+  <br>
+  <select id="select11" onchange="calculateSum()">
+    <option value="0"> 선택 안함 </option>
+    <option value="87.9" selected> 87.9 || Ableton Live 12 Suite (Upgrade) </option>
+  </select>
+  <br>
+  <select id="select17" onchange="calculateSum()">
+    <option value="0"> 선택 안함 </option>
+    <option value="30" selected> 30 || 울트라 올갈이 (대략) </option>
+  </select>
+  <br>
+  <select id="select13" onchange="calculateSum()">
+    <option value="0" selected> 선택 안함 </option>
+    <option value="120"> 120 || 클럭 음식물 쓰레기 처리기 </option>
+  </select>
+  <br>
+  <select id="select14" onchange="calculateSum()">
+    <option value="0"selected> 선택 안함 </option>
+    <option value="50"> 50 || 로봇청소기 - 대충 잡은 평균값 </option>
+  </select>
+  <br>
+  <select id="select15" onchange="calculateSum()">
+    <option value="0"> 선택 안함 </option>
+    <option value="30"> 30 || 자전거 - 대충 잡은 평균값 </option>
+    <option value="50"> 50 || 전동킥보드 - 대충 잡은 평균값 </option>
+  </select>
+  <br>
+  <select id="select16" onchange="calculateSum()">
+    <option value="0"> 선택 안함 </option>
+    <option value="300" selected> 300 || 월세 보증금 (대략) </option>
+    <option value="2000"> 2000 || 전세 보증금 (대략) </option>
+  </select>
+  <br>
+  <select id="select18" onchange="calculateSum()">
+    <option value="0"> 선택 안함 </option>
+    <option value="20" selected> 대략 20 || 정기구독 서비스 </option>
+  </select>
+  <br>
+  <select id="select19" onchange="calculateSum()">
+    <option value="0"> 선택 안함 </option>
+    <option value="500" selected> 대략 500 || 피부과 </option>
+  </select>
+  <br>
+  <div id="result"> 총합: </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+</form>
+<script>
+  function calculateSum() {
+    let sum = 0;
+
+    const selectElements = document.querySelectorAll('select[id^="select"]');
+
+    selectElements.forEach(selectElement => {
+      const value = parseFloat(selectElement.value);
+      if (!isNaN(value)) {
+        sum += value;
+      }
+    });
+
+    document.getElementById('result').innerText = '총합: ' + sum.toFixed(2); // 소숫점 두번째 자리까지만 표시하도록 설정
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    calculateSum();
+
+    const selectElements = document.querySelectorAll('select[id^="select"]');
+    selectElements.forEach(select => {
+      select.addEventListener('change', calculateSum);
+    });
+  });
+</script>
+</body>
+</html>
