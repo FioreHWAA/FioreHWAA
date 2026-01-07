@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title> 개정판 </title>
+  <style>
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        font-family: sans-serif; /* 전체 가독성을 위해 기본 폰트만 적용 */
+    }
+    .left-aligned-section {
+        text-align: left;
+        width: 350px;
+        margin-bottom: 20px;
+    }
+    form {
+        text-align: center;
+        width: 100%;
+        max-width: 900px;
+    }
+
+    /* 정렬을 위한 스타일 (유지) */
+    .input-group {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px 0;
+    }
+
+    .label-text {
+        display: inline-block;
+        width: 140px; /* 라벨 너비 고정 */
+        text-align: right;
+        margin-right: 10px;
+        font-weight: bold;
+    }
+
+    select {
+        width: 650px;
+        padding: 5px; /* 원본 스타일과 유사하게 조정 */
+        font-size: 14px;
+    }
+
+    /* 요청하신 대로 원본 스타일로 복구한 부분 */
+    #result {
+        margin-top: 20px;
+        font-size: 16px;
+        font-weight: bold;
+        color: inherit; /* 기본 색상 사용 */
+    }
+
+    .note {
+        font-weight: 900;
+        font-size: 16px;
+        color: #222;
+        margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+
+<form>
+  <br><br><br>
+  마지막 수정 - 2026년 1월 7일<br><br>
+</form>
+
+<div class="note">아래 내용 계속해서 수정 요망</div>
+
+<div style="text-align: center; margin-bottom: 20px;">
+  - 수많은 변수에서 나오는 비용까지 고려해서 가능하면 2500 안쪽으로<br>
+  - 추후에 알바를 뛰면서 기타 부가적인 지출을 커버칠 수 있음
+</div>
+
+<div style="width: 600px; text-align: left; margin: auto;">
+  <ol type="A">
+    <li> 낫싱 폰 (2) 의 소프트웨어 지원이 2026년 종료 </li>
+    <li> MacOS의 연동성 이슈, 데스크탑의 이동성 이슈로 윈도우 노트북은 필요함 </li>
+    <li> 컴퓨터 예산은 램값을 계속해서 지켜볼 것 </li>
+    <li> 월세 보증금이 엄청 애매한 항목이긴 한데 일단 강대라이크 최고가 </li>
+  </ol>
+  <ol>
+    <li> 컴퓨터는 사면 바로 자취방으로 </li>
+    <li> S24 삼케플 마감 전에 올갈이 </li>
+  </ol>
+  <ul>
+    <li> 계속해서 생기는 변수를 반영할 필요가 있음. </li>
+    - 어차피 6개월 뒤에 전역하잖아 계속 반영해
+  </ul>
+</div>
+
+<br> 참고 사이트
+<div class="left-aligned-section">
+  <ol>
+    <li><a href="https://www.samsung.com/sec/"> 삼성닷컴 </a></li>
+    <li><a href="https://www.apple.com/kr/"> Apple Korea </a></li>
+    <li><a href="https://kr.nothing.tech/"> Nothing Korea </a></li>
+    <li><a href="https://www.lge.co.kr/category/notebook"> LG전자 노트북 </a></li>
+    <li><a href="https://shop.danawa.com/shopmain/?logger_kw=dnw_gnb_pcmain"> 샵다나와 조립PC </a></li>
+    <li><a href="https://search.shopping.naver.com/search/all?where=all&frm=NVSCTAB&query=%ED%97%88%EC%88%98%EC%95%84%EB%B9%84+%EC%BB%B4%ED%93%A8%ED%84%B0"> 허수아비 컴퓨터 </a></li>
+    <li><a href="https://www.ableton.com/"> 에이블튼 </a></li>
+    <li><a href="https://www.kia.com/kr/buy/build-your-car/build/trim?rcCode=KRJA232"> 기아 모닝 </a></li>
+    <li><a href="https://casper.hyundai.com/vehicles/highlight"> 현대 캐스퍼 </a></li>
+    <br> 나머지 목록들은 대충 구글링해서 나온 값
+  </ol>
+</div>
+
+<form>
+  <hr><br>
+
+  <div class="input-group">
+    <span class="label-text">아이폰</span>
+    <select id="select1" onchange="calculateSum()">
+      <option value="0"> 선택 안함 </option>
+      <option value="200" selected> 200 || 아이폰 16 프로 맥스 (대략) </option>
+      <option value="229"> 229 || 아이폰 17 프로 맥스, 512GB </option>
+      <option value="259"> 259 || 아이폰 17 프로 맥스, 1TB </option>
+    </select>
+  </div>
+
+  <div class="input-group">
+    <span class="label-text">에어팟</span>
+    <select id="select2" onchange="calculateSum()">
+      <option value="0"> 선택 안함 </option>
+      <option value="36.9" selected> 36.9 || 에어팟 프로 3세대 </option>
+    </select>
+  </div>
+
+  <div class="input-group">
+    <span class="label-text">애플워치</span>
+    <select id="select3" onchange="calculateSum()">
+      <option value="0" selected> 선택 안함 </option>
+      <option value="59.9"> 59.9 || 애플워치 11세대 (최소사양) </option>
+      <option value="124.9"> 124.9 || 애플워치 울트라 3 (최소사양) </option>
+    </select>
+  </div>
+
+  <div class="input-group">
+    <span class="label-text">아이패드</span>
+    <select id="select4" onchange="calculateSum()">
+      <option value="0" selected> 선택 안함 </option>
+      <option value="236.3"> 236.3 || M2 아이패드 에어, 13인치, 512GB, 애플펜슬, 매직키보드 </option>
+      <option value="214.3"> 214.3 || M4 아이패드 프로, 11인치, 256GB, 스탠다드 글래스, Wi-Fi, 애플펜슬, 매직키보드 </option>
+      <option value="271.3"> 271.3 || M4 아이패드 프로, 13인치, 256GB, 스탠다드 글래스, Wi-fi, 애플펜슬, 매직키보드 </option>
+      <option value="361.3"> 361.3 || M4 아이패드 프로, 13인치, 1TB, 스탠다드 글래스, Wi-Fi, 애플펜슬, 매직키보드 </option>
+    </select>
+  </div>
+
+  <div class="input-group">
+    <span class="label-text">맥북</span>
+    <select id="select5" onchange="calculateSum()">
+      <option value="0"> 선택 안함 </option>
+      <option value="500" selected> 500 || 맥북 (대략) - 가격 예상이 불가능에 가깝다고 판단 </option>
+      <option value="383.3"> 383.3 || M3 맥북에어, 13인치, 24GB RAM, 2TB, 35W 듀얼, 파이널컷 + 로직 프로 </option>
+      <option value="435.2"> 435.2 || M4 맥북 프로, 14인치, 스탠다드 디스플레이, 32GB RAM, 2TB, 96W, 파이널컷 + 로직 프로 </option>
+      <option value="533.8"> 533.8 || M4 Pro 맥북 프로, 16인치, 스탠다드 디스플레이, 24GB RAM, 2TB, 파이널컷 + 로직 프로 </option>
+      <option value="1153.8"> 1153.8 || M4 Max 맥북 프로, 16인치, 스탠다드 디스플레이, 128GB RAM, 8TB, 파이널컷 + 로직 프로 </option>
+    </select>
+  </div>
+
+  <div class="input-group">
+    <span class="label-text">비전프로</span>
+    <select id="select6" onchange="calculateSum()">
+      <option value="0" selected> 선택 안함 </option>
+      <option value="500"> 500 || 애플 비전 프로, 256GB </option>
+      <option value="600"> 600 || 애플 비전 프로, 1TB </option>
+    </select>
+  </div>
+
+  <div class="input-group">
+    <span class="label-text">윈도우 노트북</span>
+    <select id="select7" onchange="calculateSum()">
+      <option value="0" selected> 선택 안함 </option>
+      <option value="167"> 167 || LG 그램 2025, 16인치, 코어 울트라 5 225H, 16GB RAM, 512GB </option>
+      <option value="230.8"> 230.8 || 갤럭시북 5 Pro, 16인치, 코어 울트라 5 225H, 16GB RAM, 512GB </option>
+    </select>
+  </div>
+
+  <div class="input-group">
+    <span class="label-text">갤럭시탭</span>
+    <select id="select8" onchange="calculateSum()">
+      <option value="0" selected> 선택 안함 </option>
+      <option value="115"> 115 || 갤럭시탭 S10+ (12.4인치), 256GB, Wi-Fi </option>
+      <option value="149.1"> 147.5 || 갤럭시탭 S10 울트라 (14.6인치), 256GB, Wi-Fi </option>
+    </select>
+  </div>
+
+  <div class="input-group">
+    <span class="label-text">갤럭시</span>
+    <select id="select12" onchange="calculateSum()">
+      <option value="0"> 선택 안함 </option>
+      <option value="137" selected> 137 || S25 엣지 (대략) </option>
+      <option value="206.23"> 206.23 || S25 울트라, 1TB </option>
+      <option value="248.49"> 248.49 || Z 폴드 6, 1TB </option>
+      <option value="278.96"> 278.96 || Z 폴드 SE, 512GB - 현재 구매 불가 </option>
+    </select>
+  </div>
+
+  <div class="input-group">
+    <span class="label-text">차</span>
+    <select id="select9" onchange="calculateSum()">
+      <option value="0" selected> 선택 안함 </option>
+      <option value="1325"> 1325 || 모닝 트렌디, 옵션 미포함 </option>
+      <option value="1385"> 1385 || 캐스퍼 스마트, 옵션 미포함 </option>
+      <option value="1820"> 1820 || 모닝 GT-line, 옵션 미포함 </option>
+      <option value="1870"> 1870 || 캐스퍼 인스퍼레이션, 옵션 미포함 </option>
+    </select>
+  </div>
+
+  <div class="input-group">
+    <span class="label-text">컴퓨터</span>
+    <select id="select10" onchange="calculateSum()">
+      <option value="0"> 선택 안함 </option>
+      <option value="500" selected> 500 || 컴퓨터 (대략) - 가격 예측이 불가능하다고 판단 </option>
+    </select>
+  </div>
+
+  <div class="input-group">
+    <span class="label-text">에이블튼 라이브</span>
+    <select id="select11" onchange="calculateSum()">
+      <option value="0"> 선택 안함 </option>
+      <option value="87.9" selected> 87.9 || Ableton Live 12 Suite (Upgrade) </option>
+    </select>
+  </div>
+
+  <div class="input-group">
+    <span class="label-text">올갈이 비용</span>
+    <select id="select17" onchange="calculateSum()">
+      <option value="0"> 선택 안함 </option>
+      <option value="30" selected> 30 || 울트라 올갈이 (대략) </option>
+    </select>
+  </div>
+
+  <div class="input-group">
+    <span class="label-text">음쓰처리기</span>
+    <select id="select13" onchange="calculateSum()">
+      <option value="0" selected> 선택 안함 </option>
+      <option value="120"> 120 || 클럭 음식물 쓰레기 처리기 </option>
+    </select>
+  </div>
+
+  <div class="input-group">
+    <span class="label-text">로봇청소기</span>
+    <select id="select14" onchange="calculateSum()">
+      <option value="0" selected> 선택 안함 </option>
+      <option value="50"> 50 || 로봇청소기 - 대충 잡은 평균값 </option>
+    </select>
+  </div>
+
+  <div class="input-group">
+    <span class="label-text">탈거</span>
+    <select id="select15" onchange="calculateSum()">
+      <option value="0"> 선택 안함 </option>
+      <option value="30"> 30 || 자전거 - 대충 잡은 평균값 </option>
+      <option value="50"> 50 || 전동킥보드 - 대충 잡은 평균값 </option>
+    </select>
+  </div>
+
+  <div class="input-group">
+    <span class="label-text">보증금</span>
+    <select id="select16" onchange="calculateSum()">
+      <option value="0"> 선택 안함 </option>
+      <option value="300" selected> 300 || 월세 보증금 (대략) </option>
+      <option value="2000"> 2000 || 전세 보증금 (대략) </option>
+    </select>
+  </div>
+
+  <div class="input-group">
+    <span class="label-text">정기구독</span>
+    <select id="select18" onchange="calculateSum()">
+      <option value="0"> 선택 안함 </option>
+      <option value="20" selected> 대략 20 || 정기구독 서비스 </option>
+    </select>
+  </div>
+
+  <div class="input-group">
+    <span class="label-text">피부과</span>
+    <select id="select19" onchange="calculateSum()">
+      <option value="0"> 선택 안함 </option>
+      <option value="500" selected> 대략 500 || 피부과 </option>
+    </select>
+  </div>
+
+  <div class="input-group">
+    <span class="label-text">카메라</span>
+    <select id="select20" onchange="calculateSum()">
+      <option value="0" selected> 선택 안함 </option>
+      <option value="279.4"> 279.4 || 소니 A7M4 </option>
+      <option value="238.537"> 238.537 || 소니 A7C2 </option>
+      <option value="348.869"> 348.369 || 소니 A7CR </option>
+    </select>
+  </div>
+
+  <br>
+  <hr width="700" size="4" noshade color="#ccc">
+  <br>
+
+  <div class="input-group">
+    <span class="label-text">갤럭시 버즈</span>
+    <select id="select21" onchange="calculateSum()">
+      <option value="0"> 선택 안함 </option>
+      <option value="22.9" selected> 22.9 || 갤럭시 버즈 3 프로 </option>
+    </select>
+  </div>
+
+  <div class="input-group">
+    <span class="label-text">스마트워치</span>
+    <select id="select22" onchange="calculateSum()">
+      <option value="0"> 선택 안함 </option>
+      <option value="8.9" selected> 8.9 || CMF Watch Pro 2 </option>
+    </select>
+  </div>
+
+  <div id="result">총합: 2120.17</div>
+  <br><br><br><br><br>
+</form>
+
+<script>
+  function calculateSum() {
+    let sum = 0;
+    const selectElements = document.querySelectorAll('select[id^="select"]');
+
+    selectElements.forEach(selectElement => {
+      const value = parseFloat(selectElement.value);
+      if (!isNaN(value)) {
+        sum += value;
+      }
+    });
+
+    document.getElementById('result').innerText = '총합: ' + sum.toFixed(2);
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    calculateSum();
+
+    const selectElements = document.querySelectorAll('select[id^="select"]');
+    selectElements.forEach(select => {
+      select.addEventListener('change', calculateSum);
+    });
+  });
+</script>
+
+</body>
+</html>
